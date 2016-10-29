@@ -8,11 +8,15 @@
 		body{
 			font-family: Verdana,sans-serif;/*sans-serif si no funcionaba en mi navegador, pero si funcionó*/
 			font-size: 100%;
+			font-family: Georgia;
+			line-height: 1.75em;
 		}
 		h1{
 			/*font-family: Marko One,Georgia,serif;*/
 			/*font-size: 1.5em;*/
 			font: 1.5em Marko One,Georgia,serif;
+			color: purple;
+			text-shadow: .1em .1em .2em lightslategray;
 		}
 		p,dl{
 			font-size: 0.875em;/*14 dividido para 16*/
@@ -23,14 +27,43 @@
 		strong{
 			font-style: italic;
 		}
-		dl strong{
+		dl dt strong{
 			color: maroon;
 		}
 		#info{
-			color: teal;
+			/*color: teal;*/
 		}
-		#info p :not(span){
+		#info p::first-line{/* Solo abarca Guayaquil-Ecuador, es lo que dice la consigna*/
 			font-style: italic;
+			color: gray;
+		}
+		.price{
+			family-font: Georgia,serif;
+			color: gray;
+			font-style: italic;
+		}
+		.label{
+			font-weight: bold;
+			font-style: normal;
+			font-variant: small-caps;
+		}
+		.warning{
+			color: red;
+			font-size: x-small;
+		}
+		h1,h2,#info{
+			text-align: center;
+		}
+		h2{
+			text-transform: uppercase;
+			letter-spacing: .5em;
+			color: purple;
+		}
+		h2+p{
+			text-align: center;
+		}
+		dt{
+			color: sienna;
 		}
     </style>
 </head>
@@ -48,7 +81,7 @@
             <dt>Bolón Navideño</dt>
             <dd>El tradicional bolón de verde con relleno de pavo con pasas y nueces bañado en salsa de vino blanco. <span class=
             "price">$3.50</span></dd>
-            <dt class="newitem">Tartaletas de Camarón &mdash;
+            <dt>Tartaletas de Camarón &mdash;
             <strong>nueva opción!</strong></dt>
             <dd>Deliciosas tartaletas de camarón encroutado en ajonjoli con crema de queso a las finas hierbas. <span class="price">$4.50</span></dd>
         </dl>
@@ -57,7 +90,7 @@
         <h2>Platos Fuertes</h2>
         <p>Nuestras multiples opciones deleitaran tu paladar. Todos los platos fuertes viene acompañados de tu bebida favorita.</p>
         <dl>
-            <dt class="newitem">Medallones de pollo
+            <dt>Medallones de pollo
             &mdash; <strong>nueva opción!</strong></dt>
             <dd>Medallones de pollo rellenos de jamón y queso, bañados en salsa de vino blanco. Acompañados por un delicioso moro de lenteja y una ensalada cesar. <strong>Especialidad del chef!.</strong> <span class=
             "price">$11.95</span></dd>
